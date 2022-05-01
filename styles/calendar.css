@@ -8,8 +8,8 @@
   display: none;
 }
 
-.calendar {
-  padding: 50px;
+.title {
+  margin: auto;
 }
 
 .title button {
@@ -49,14 +49,15 @@
 
 .calendar {
   margin: auto;
-  min-width: 550px;
   width: 70%;
+  padding-top: 50px;
 }
 
 #calendar-table {
   width: 100%;
   border-spacing: 10px;
   table-layout: fixed;
+  margin: auto;
 }
 
 .calendar thead {
@@ -283,6 +284,11 @@
   .month {
     font-size: 1.5rem;
     display: block;
+  }
+
+  .title {
+    min-width: 300px;
+    width: 300px;
   }
 
   .title button {
