@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles/calendar.css" />
+  </head>
+
+  <body>
+    <main class="calendar">
+      <div class="title">
+        <div class="month">2022년 04월</div>
+        <button class="prev-month"><i class="fas fa-angle-left"></i></button>
+        <button class="next-month"><i class="fas fa-angle-right"></i></button>
+        <button class="to-today">오늘</button>
+      </div>
+      <table id="calendar-table">
+        <thead>
+          <tr>
+            <th class="day">일</th>
+            <th class="day">월</th>
+            <th class="day">화</th>
+            <th class="day">수</th>
+            <th class="day">목</th>
+            <th class="day">금</th>
+            <th class="day">토</th>
+          </tr>
+        </thead>
+      </table>
+
+      <div id="task-adder" class="modal hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <button class="close-btn"><i class="fas fa-x"></i></button>
+          <form id="task-form">
+            <input type="text" id="task-title" placeholder="일정 제목" autocomplete="off" autofocus />
+            <div class="pickerframe" id="task-start">
+              <span>시작</span>
+              <input type="text" class="picker year-picker" min="1990" max="9999" maxlength="4" autocomplete="off" />
+              <span>/</span>
+              <input type="text" class="picker month-picker" min="01" max="12" maxlength="2" autocomplete="off" />
+              <span>/</span>
+              <input type="text" class="picker date-picker" min="01" max="31" maxlength="2" autocomplete="off" />
+            </div>
+            <div class="pickerframe" id="task-end">
+              <span>끝</span>
+              <input type="text" class="picker year-picker" min="1990" max="9999" maxlength="4" autocomplete="off" />
+              <span>/</span>
+              <input type="text" class="picker month-picker" min="01" max="12" maxlength="2" autocomplete="off" />
+              <span>/</span>
+              <input type="text" class="picker date-picker" min="01" max="31" maxlength="2" autocomplete="off" />
+            </div>
+            <button class="last-btn add-btn">추가</button>
+            <button class="last-btn change-btn hidden">변경</button>
+            <button class="last-btn delete-btn hidden">삭제</button>
+            <ul id="tasks"></ul>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/calendar.js"></script>
+  </body>
+</html>
