@@ -143,6 +143,8 @@ function closeModal() {
   addBtn.classList.remove("hidden");
   changeBtn.classList.add("hidden");
   deleteBtn.classList.add("hidden");
+  taskForm.reset();
+  presetPicker();
 }
 closeBtn.addEventListener("click", closeModal);
 background.addEventListener("click", closeModal);
